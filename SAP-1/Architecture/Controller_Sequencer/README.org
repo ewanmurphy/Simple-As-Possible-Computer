@@ -1,0 +1,38 @@
+#+title: Controller Sequencer
+#+property: header-args :tangle Controller_Sequencer.v
+#+auto-tangle: t
+#+startup: showeverything
+
+
+* DESCRPTION :
+Before each computer run, a CLR_bar signal is sent ot the program counter and a CLR signal to the instruction register. This resets the program counter to 0000 and wipes out the last instruction in the instruction register.
+
+A clock signal CLK is sent to all buffer registers; this synchronizes the operation of the computer, ensuring that things happen when they are supposed to happen. In other words, all register transfers occur on the positive edge of a common CLK signal. Notice that a CLK_signal also goes to the program counter.
+
+The 12 bits that come out of the controllers-sequencer form a word controlling the rest of the computer (like a supervisor telling others what to do.)The 12 wires carrying the control word are called the control bus.
+The control word has the format of
+CON = C_P, E_P, L_M_bar, CE_bar
+      L_I_bar, E_I_bar, L_A_bar, E_A
+      S_U, E_U, L_B_bar, L_O_bar
+Here I have split the 3 numbles onto different lines. This word determines how the registers will react to the next positive CLK edge. For instance, a high E_P and a low L_M_bar mean that the contents of the program counter are latched into the MAR on the next positive clock edge. As another example, a low CE_bar and a low L_A_bar mean that the addressed RAM word will be transferred to the accumulator on the next positive clock edge.
+* LOGIC DIAGRAM :
+* TRUTH TABLE :
+* PIN CONFIGURATION :
+* VERILOG CODE :
+** Module :
+#+begin_src verilog
+module Controller_Sequencer(
+    input  instruction[3:0],
+    output CLK,
+    output CLK_bar,
+    output CLR,
+    output CLR_bar,
+    output CON[11:0]
+    );
+endmodule
+#+end_src
+** Testbench
+#+begin_src verilog
+module Controller_Sequencer_tb;
+endmodule
+#+end_src

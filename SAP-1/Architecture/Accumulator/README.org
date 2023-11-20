@@ -1,0 +1,29 @@
+#+title: Accumulator A
+#+property: header-args :tangle Accumulator.v
+#+auto-tangle: t
+#+startup: showeverything
+
+
+* DESCRPTION :
+The accumulator (A) is a buffer register that stores intermediate answers during a computer run. The accumulator has two outputs. The two-state output goes directly to the adder-subtracter. The three-state output goes to the W bus. Therefore, the 8-bit accumulator word continuously drives the adder-subtracter; the same word appears on the W bus when E_a is high.
+* LOGIC DIAGRAM :
+* TRUTH TABLE :
+* PIN CONFIGURATION :
+* VERILOG CODE :
+** Module :
+#+begin_src verilog
+module Accumulator(
+    input  bus_input[7:0],
+    input  L_A_bar,
+    input  E_A,
+    input  clk,
+    output bus_output[7:0],
+    output add_sub_output[7:0]
+    );
+endmodule
+#+end_src
+** Testbench
+#+begin_src verilog
+module Accumulator_tb;
+endmodule
+#+end_src

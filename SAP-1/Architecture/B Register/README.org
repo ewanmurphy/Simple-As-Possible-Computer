@@ -1,0 +1,27 @@
+#+title: B Register
+#+property: header-args :tangle B_Register.v
+#+auto-tangle: t
+#+startup: showeverything
+
+
+* DESCRPTION :
+The B register is buffer register. It is used in arithmetic operations. A low L_B_bar and positive clock edge load the word on the W bus into the B register. The two-state output of the B register drivers the adder-subtracter, supplying the number to be added or subtracted from the contents of the accumulator.
+* LOGIC DIAGRAM :
+* TRUTH TABLE :
+* PIN CONFIGURATION :
+* VERILOG CODE :
+** Module :
+#+begin_src verilog
+module B_Register(
+    input  bus_input[7:0],
+    input  L_B_bar,
+    input  clk,
+    output add_sub_output[7:0]
+    );
+endmodule
+#+end_src
+** Testbench
+#+begin_src verilog
+module B_Register_tb;
+endmodule
+#+end_src

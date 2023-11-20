@@ -1,0 +1,31 @@
+#+title: Program Counter
+#+property: header-args :tangle Program_Counter.v
+#+auto-tangle: t
+#+startup: showeverything
+
+
+* DESCRPTION :
+The program is stored at the beginning of the memory with the first instruction at binary address 0000, the second instruction at address 0001, the third at address 0010, and so on. The program counter, which is part of the control unit, counts from 0000 to 1111. It's job is to send to the memory the address of the next instruction to be feteched and executed. It does this as follows
+The program counter is reset to 0000 before each computer run. When the computer run begins, the program counter sends address 0000 to the memory. The program counter is then incremented to get 0001. After the first instruction is fetech and executed, the program counter is incremented. After the second instruction is fetched and executed the program counter sends address 0010 to the memory. In this way, the program counter is keeping track of the next instruction to be fetch and executed.
+The program counter is like someone pointing a finger at a list of instructions, saying do this first, do this second, do this third, etc.
+
+* LOGIC DIAGRAM :
+* TRUTH TABLE :
+* PIN CONFIGURATION :
+* VERILOG CODE :
+** Module :
+#+begin_src verilog
+module Program_Counter(
+    input C_p,
+    input CLK_bar,
+    input CLR_bar,
+    input E_p,
+    output address[3:0]
+    );
+endmodule
+#+end_src
+** Testbench
+#+begin_src verilog
+module Program_Counter_tb;
+endmodule
+#+end_src

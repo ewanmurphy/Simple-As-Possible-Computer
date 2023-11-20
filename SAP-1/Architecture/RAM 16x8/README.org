@@ -1,0 +1,28 @@
+#+title: RAM 16x8
+#+property: header-args :tangle RAM_16x8.v
+#+auto-tangle: t
+#+startup: showeverything
+
+
+* DESCRPTION :
+The RAM is a 16x8 static TTL RAM. You can program the RAM by means of the address and dta switch registers. This allows you to store a program and data in the memory before a computer run. During a computer run, the RAM receives 4-bit addressed form the MAR and a read operation is performed. In this way, the instruction or data word stored in the RAM is placed on the W bus for use in some other part of the computer.
+* LOGIC DIAGRAM :
+* TRUTH TABLE :
+* PIN CONFIGURATION :
+* VERILOG CODE :
+** Module :
+#+begin_src verilog
+module RAM_16x8(
+    input C_p,
+    input CLK_bar,
+    input CLR_bar,
+    input E_p,
+    output address[3:0]
+    );
+endmodule
+#+end_src
+** Testbench
+#+begin_src verilog
+module RAM_16x8_tb;
+endmodule
+#+end_src

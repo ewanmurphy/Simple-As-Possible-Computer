@@ -1,0 +1,29 @@
+#+title: Input and MAR
+#+property: header-args :tangle Input_and_MAR.v
+#+auto-tangle: t
+#+startup: showeverything
+
+
+* DESCRPTION :
+The Input and MAR block includes the address and data switch registers. These switch registers, whare are part of the input unit, allow you to send 4 address bits and 8 data bits to the RAM. Instruction and data words need to be written into the RAM before the computer can run.
+The memory address register (MAR) is part of the SAP-1 memory. During a computer run, the address in the program counter is latched into the MAR. A bit later, the MAR applied this 4-bit address to the RAM, where a read operation is performed.
+* LOGIC DIAGRAM :
+* TRUTH TABLE :
+* PIN CONFIGURATION :
+* VERILOG CODE :
+** Module :
+#+begin_src verilog
+module Input_and_MAR(
+    input L_M_bar,
+    input CLK,
+    input bus_input[3:0],
+    output LS_output[3:0],
+    output MS_output[3:0]
+    );
+endmodule
+#+end_src
+** Testbench
+#+begin_src verilog
+module Input_and_MAR_tb;
+endmodule
+#+end_src

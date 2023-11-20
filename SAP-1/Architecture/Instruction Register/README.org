@@ -1,0 +1,31 @@
+#+title: Instruction Register
+#+property: header-args :tangle Instruction_Register.v
+#+auto-tangle: t
+#+startup: showeverything
+
+
+* DESCRPTION :
+The instruction register is part of the control unit. To fetch an instruction from the memory the computer does a memory read operation. This palces the contents of the addressed memory location on the W bus. At the same time, the instruction register is set up for loading on the next positive clock edge.
+The contents of the instruction register are split into two nibbles. The upper nibble is a two-state output that goes directly to the Controller Sequencer. The lower nibble is a three-state output that is read onto the W bus when needed.
+* LOGIC DIAGRAM :
+* TRUTH TABLE :
+* PIN CONFIGURATION :
+* VERILOG CODE :
+** Module :
+#+begin_src verilog
+module Instruction_Register(
+    input  L_I_bar,
+    input  CLK,
+    input  CLR,
+    input  E_I_bar,
+    input  bus_input[7:0],
+    output data[3:0],
+    output instruction[3:0]
+    );
+endmodule
+#+end_src
+** Testbench
+#+begin_src verilog
+module Instruction_Register_tb;
+endmodule
+#+end_src

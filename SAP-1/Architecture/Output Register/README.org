@@ -1,0 +1,28 @@
+#+title: Output Register
+#+property: header-args :tangle Output_Register.v
+#+auto-tangle: t
+#+startup: showeverything
+
+
+* DESCRPTION :
+At the end of a computer run, the accumulator contains the answer to the problem being solved. At this point, we need to transfer the answer to the outside world. This is where the output register is used. When E_A is high and L_O_bar is low, the next positive clock edge loads the accumulator word into the output register.
+The output register is often called an output port because procedded data can leave the computer through this register. In microcomputers the output ports are connected to interface circuits that drive peripheral devices like printers, cathode-ray tubes, teletypewriters, and so forth. (An interface circuit prepares the data to drive each device.)
+* LOGIC DIAGRAM :
+* TRUTH TABLE :
+* PIN CONFIGURATION :
+* VERILOG CODE :
+** Module :
+#+begin_src verilog
+module Output_Register(
+    input L_O_bar,
+    input CLK,
+    input bus_input[7:0],
+    output display_output[7:0]
+    );
+endmodule
+#+end_src
+** Testbench
+#+begin_src verilog
+module Output_Register_tb;
+endmodule
+#+end_src
