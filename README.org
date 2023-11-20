@@ -1,0 +1,5 @@
+#+title: Simple As Possible Computer
+#+author: Ewan Murphy
+
+* SAP (Simple-As-Possible)
+The SAP computer was designed to introduce beginners to computer architecure by having as simple as possible an architecure. There are 3 variations of the computer, SAP-1, SAP-2 and SAP-3, each building on the previous by adding more functionalilty. The Instruction Set Architecture (ISA) of these microprocessors is a subset of the 8080/8085 ISA.
