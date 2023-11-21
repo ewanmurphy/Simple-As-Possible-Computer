@@ -15,13 +15,12 @@ The program counter is like someone pointing a finger at a list of instructions,
 * VERILOG CODE :
 ** Module :
 #+begin_src verilog
-module Program_Counter(
-    input C_p,
-    input CLK_bar,
-    input CLR_bar,
-    input E_p,
-    output address[3:0]
-    );
+module Program_Counter(C_P, CLK_bar, CLR_bar, E_P, address);
+    input C_P;
+    input CLK_bar;
+    input CLR_bar;
+    input E_P;
+    output [3:0] address;
 endmodule
 #+end_src
 ** Testbench

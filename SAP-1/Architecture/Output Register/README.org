@@ -13,12 +13,11 @@ The output register is often called an output port because procedded data can le
 * VERILOG CODE :
 ** Module :
 #+begin_src verilog
-module Output_Register(
-    input L_O_bar,
-    input CLK,
-    input bus_input[7:0],
-    output display_output[7:0]
-    );
+module Output_Register(L_O_bar, CLK, bus_input, display_output);
+    input L_O_bar;
+    input CLK;
+    input [7:0] bus_input;
+    output [7:0] display_output;
 endmodule
 #+end_src
 ** Testbench

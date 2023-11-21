@@ -1,10 +1,9 @@
-module Input_and_MAR(
-    input L_M_bar,
-    input CLK,
-    input bus_input[3:0],
-    output LS_output[3:0],
-    output MS_output[3:0]
-    );
+module Input_and_MAR(L_M_bar, CLK, bus_input, LS_output, MS_output);
+    input L_M_bar;
+    input CLK;
+    input  [3:0] bus_input;
+    output [3:0] LS_output;
+    output [3:0] MS_output;
 endmodule
 
 module Input_and_MAR_tb;

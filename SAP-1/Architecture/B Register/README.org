@@ -12,12 +12,11 @@ The B register is buffer register. It is used in arithmetic operations. A low L_
 * VERILOG CODE :
 ** Module :
 #+begin_src verilog
-module B_Register(
-    input  bus_input[7:0],
-    input  L_B_bar,
-    input  clk,
-    output add_sub_output[7:0]
-    );
+module B_Register(bus_input, L_B_bar, CLK, add_sub_output);
+    input [7:0] bus_input;
+    input  L_B_bar;
+    input  CLK;
+    output [7:0] add_sub_output;
 endmodule
 #+end_src
 ** Testbench
