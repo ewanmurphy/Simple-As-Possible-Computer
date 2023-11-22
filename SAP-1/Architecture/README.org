@@ -7,6 +7,7 @@
 This is the architecture for the whole SAP-1 microprocessor. It combines the blocks that make up the ALU, Control Unit, Memory Unit and I/O to produce a programable computer.
 * DIAGRAM :
 [[../SAP-1_Architecture.jpg]]
+
 ALU : Accumulator A, Adder/Subtractor, B Register
 Control Unit : Program Counter, Instruction Register, Controller/Sequencer
 Memory Unit : Input and MAR, 16x8 RAM
