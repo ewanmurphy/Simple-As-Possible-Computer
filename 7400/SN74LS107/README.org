@@ -1,0 +1,113 @@
+#+title: 74LS107 Duel J-K Flip-Flops with Clear
+#+property: header-args :tangle SN74LS107.v
+#+auto-tangle: t
+#+startup: showeverything
+
+* DISCLAIMER :
+This README covers the logical operation of the SN74LS107, for electrical characteristics see
+https://www.ti.com/lit/ds/symlink/sn74ls107a.pdf?ts=1700670670736&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FSN74LS107A%253FkeyMatch%253D74107
+* DESCRPTION :
+This chip contains two independent positive edge-triggered J-K flip-flops with individual J-K, clock and direct clear inputs. The clear is asynchronous, setting Q=0 and Q_bar=1 regardless of the clock state.
+* LOGIC DIAGRAM :
+This is the logic diagram from the SN74LS107 data sheet. It describes how a single J-K flip-flop was implemented using logic gates. Verilog provides a way to use flip-flops from a description of their behaviour, I will use this feature to implement the SN74LS107 logic but I include this diagram for completeness.
+
+[[./74LS107_LogicDiagram.jpg]]
+* TRUTH TABLE :
++----------------------------+------------------+
+|           INPUT            |     OUTPUTS      |
++---------+----------+---+---+--------+---------+
+| CLR_bar | CLK      | J | K | Q      | Q_bar   |
++---------+----------+---+---+--------+---------+
+| 0       | x        | x | x | 0      | 1       |
+| 1       | pos_edge | 0 | 0 | Q_0    | Q_0_bar |
+| 1       | pos_edge | 1 | 0 | 1      | 0       |
+| 1       | pos_edge | 0 | 1 | 0      | 1       |
+| 1       | pos_edge | 1 | 1 | TOGGLE | TOGGLE  |
++---------+----------+---+---+--------+---------+
+This corresponds to the equation Q = (J & Q_bar) | (~K & Q) when the CLR_bar is 1.
+
+* PIN CONFIGURATION :
+[[./74LS107_PinConfiguration.jpg]]
+* VERILOG CODE :
+** Module :
+#+begin_src verilog
+module JK_FlipFlop(CLR_bar, CLK, J, K, Q, Q_bar);
+   input CLR_bar;
+   input CLK;
+   input J;
+   input K;
+   output reg Q, Q_bar;
+
+   always @(posedge CLK or posedge CLR_bar) begin
+      if (~CLR_bar) begin
+         Q <= 0;
+         Q_bar <= 1;
+      end
+      else begin
+         Q <= (J & Q_bar) | (~K & Q);
+         Q_bar <= ~((J & Q_bar) | (~K & Q));
+      end
+   end
+endmodule
+module SN74LS107(CLK, CLR_bar_1, J_1, K_1, Q_1, Q_bar_1, CLR_bar_2, J_2, K_2, Q_2, Q_bar_2);
+   input CLK;
+   input CLR_bar_1, CLR_bar_2;
+   input J_1, J_2;
+   input K_1, K_2;
+   output Q_1, Q_bar_1, Q_2, Q_bar_2;
+
+   JK_FlipFlop FF_1(.CLR_bar(CLR_bar_1), .CLK(CLK), .J(J_1), .K(K_1), .Q(Q_1), .Q_bar(Q_bar_1));
+   JK_FlipFlop FF_2(.CLR_bar(CLR_bar_2), .CLK(CLK), .J(J_2), .K(K_2), .Q(Q_2), .Q_bar(Q_bar_2));
+endmodule
+#+end_src
+** Testbench
+#+begin_src verilog
+module SN74LS107_tb;
+   reg CLK;
+   reg CLR_bar_1, J_1, K_1;
+   wire Q_1, Q_bar_1;
+   reg CLR_bar_2, J_2, K_2;
+   wire Q_2, Q_bar_2;
+
+
+   SN74LS107 DUT(.CLK(CLK),
+                 .CLR_bar_1(CLR_bar_1), .J_1(J_1), .K_1(K_1), .Q_1(Q_1), .Q_bar_1(Q_bar_1),
+                 .CLR_bar_2(CLR_bar_2), .J_2(J_2), .K_2(K_2), .Q_2(Q_2), .Q_bar_2(Q_bar_2));
+   initial begin
+      CLK=0;
+      forever #1 CLK = ~CLK;
+   end
+   initial begin
+      // Waveform generation
+      $dumpfile("SN74LS107_tb.vcd");
+      $dumpvars(0, SN74LS107_tb);
+      CLR_bar_1 = 0; CLR_bar_2 = 0;
+      #2;
+      CLR_bar_1 = 1;
+      // Test flip-flop 1
+      J_1 = 0; K_1 = 1; // Set Q = 0
+      #2;
+      J_1 = 0; K_1 = 0; // Hold value
+      #2;
+      J_1 = 1; K_1 = 0; // Set Q = 1
+      #2;
+      J_1 = 0; K_1 = 0; // Hold value
+      #2;
+      J_1 = 1; K_1 = 1; // Toggle value
+      #2
+      // Test flip-flop 2
+      CLR_bar_2 = 1;
+      J_2 = 1; K_2 = 0; // Set Q = 1
+      #2;
+      J_2 = 0; K_2 = 0; // Hold value
+      #2;
+      J_2 = 0; K_2 = 1; // Set Q = 0
+      #2;
+      J_2 = 0; K_2 = 0; // Hold value
+      #2;
+      J_2 = 1; K_2 = 1; // Toggle value
+      #2
+      $finish;
+   end
+endmodule
+#+end_src
