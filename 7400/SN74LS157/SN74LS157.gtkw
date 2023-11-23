@@ -1,0 +1,26 @@
+[*]
+[*] GTKWave Analyzer v3.3.117 (w)1999-2023 BSI
+[*] Thu Nov 23 14:03:31 2023
+[*]
+[dumpfile] "/home/ewan/Documents/LowLevelProgramming/Digital Electronics/Simple-As-Possible-Computer/7400/SN74LS157/SN74LS157_tb.vcd"
+[dumpfile_mtime] "Thu Nov 23 14:02:51 2023"
+[dumpfile_size] 563
+[savefile] "/home/ewan/Documents/LowLevelProgramming/Digital Electronics/Simple-As-Possible-Computer/7400/SN74LS157/SN74LS157.gtkw"
+[timestart] 0
+[size] 1350 689
+[pos] -1 -1
+*-1.179960 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] SN74LS157_tb.
+[sst_width] 273
+[signals_width] 78
+[sst_expanded] 1
+[sst_vpaned_height] 188
+@28
+SN74LS157_tb.DUT.G_bar
+SN74LS157_tb.DUT.SELECT
+@22
+SN74LS157_tb.DUT.A[4:1]
+SN74LS157_tb.DUT.B[4:1]
+SN74LS157_tb.DUT.Y[4:1]
+[pattern_trace] 1
+[pattern_trace] 0
