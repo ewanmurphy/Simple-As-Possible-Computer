@@ -1,0 +1,80 @@
+#+title: 74189 64-bit RAM (16x4), 4 data inputs, 4 inverted data outputs
+#+property: header-args :tangle SN74189.v
+#+auto-tangle: t
+#+startup: showeverything
+
+* DISCLAIMER :
+This README covers the logical operation of the SN74189, for electrical characteristics see https://archive.org/details/bitsavers_tidataBookcomputerComponentsDataBook_16851665/page/n191/mode/2up.
+* DESCRPTION :
+64-bit Random-Access Memories (RAM) organised into 16 words of four bits each.
+** Write Cycle
+The information applied at the data input is written into the selected location when the chip-select input and the write-enable are low. While the write-enable input is low, the output is in the high-impedence. When a number of outputs are bus-connected, this high-impedence state will neither load nor drive the bus line, but it will allow the bus line to be driven by another active output.
+** Read Cycle
+The stored information (complement of information applied at the data input during the write cycle) is available at the output when the write-enable input is high and the chip-select input is low. When the chip-select input is high, the output will be in the high-inpedence state.
+* FUNCTIONAL BLOCK DIAGRAM :
+[[./74189_FunctionalBlockDiagram.jpg]]
+* FUNCTION TABLE :
++-----------+--------------------------------------------+-------------------------------+
+|           |                   INPUTS                   |                               |
+| Function  +---------------------+----------------------+            OUTPUT             |
+|           | CHIP SELECT (S_bar) | WRITE ENABLE (W_bar) |                               |
++-----------+---------------------+----------------------+-------------------------------+
+|   Write   |          0          |          0           |        High Impedence         |
++-----------+---------------------+----------------------+-------------------------------+
+|   Read    |          0          |          1           |  Complement of Data Entered   |
++-----------+---------------------+----------------------+-------------------------------+
+|  Inhibit  |          1          |          x           |        High Impedance         |
++-----------+---------------------+----------------------+-------------------------------+
+* PIN CONFIGURATION :
+[[./74189_PinConfiguration.jpg]]
+* VERILOG CODE :
+** Module :
+Behavioral verilog implementation of the SN74189. This uses a register array to act as the memory matrix which is very inefficient for synthesis as it will use flip-flop for each storage bit. This is fine for small memories like this, and if actually what is used for register files. However, for projects using larger memories you will need to use one from a library containing the specific memory blocks you will have available during synthesis.
+#+begin_src verilog
+module SN74189(A, DI, DO, S_bar, W_bar);
+   input [3:0] A;
+   input [3:0] DI;
+   output [3:0] DO;
+   input S_bar, W_bar;
+
+   reg [3:0] mem[15:0]; reg [3:0] d_out;
+
+   assign DO = (!S_bar && W_bar) ? ~d_out : 4'hz;
+   // Write
+   always @(A, DI, S_bar, W_bar)
+     if (!S_bar && !W_bar) mem[A] = DI;
+   // Read
+   always @(A, S_bar, W_bar)
+     if (!S_bar && W_bar) d_out = mem[A];
+endmodule
+#+end_src
+** Testbench
+#+begin_src verilog
+module SN74189_tb;
+   reg [3:0] address;
+   wire [3:0] data_out;
+   reg [3:0] data_in;
+   reg write_bar, select_bar;
+   integer k, myseed;
+
+   SN74189 DUT (address, data_in, data_out, select_bar, write_bar);
+
+   initial
+     begin
+        $dumpfile("SN74189_tb.vcd");
+        $dumpvars(0, SN74189_tb);
+        for (k=0; k<=15; k=k+1)
+          begin
+             data_in = (k+5) % 16; address = k; write_bar = 0; select_bar = 0; #2;
+          end
+        repeat (20)
+          begin
+             address = $random(myseed) % 16;
+             write_bar = 1; select_bar = 0;
+             #2;
+             $display ("Address : %2d, Data: %2d", address, ~data_out);
+          end
+     end
+   initial myseed = 314;
+endmodule
+#+end_src

@@ -1,0 +1,30 @@
+[*]
+[*] GTKWave Analyzer v3.3.117 (w)1999-2023 BSI
+[*] Tue Dec  5 22:48:44 2023
+[*]
+[dumpfile] "/home/ewan/Documents/LowLevelProgramming/Digital Electronics/Simple-As-Possible-Computer/7400/SN74189/SN74189_tb.vcd"
+[dumpfile_mtime] "Tue Dec  5 22:47:41 2023"
+[dumpfile_size] 2127
+[savefile] "/home/ewan/Documents/LowLevelProgramming/Digital Electronics/Simple-As-Possible-Computer/7400/SN74189/SN74189.gtkw"
+[timestart] 0
+[size] 1001 1018
+[pos] -1 -1
+*-4.552910 34 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] SN74189_tb.
+[sst_width] 273
+[signals_width] 134
+[sst_expanded] 1
+[sst_vpaned_height] 302
+@22
+SN74189_tb.address[3:0]
+SN74189_tb.data_in[3:0]
+SN74189_tb.data_out[3:0]
+@28
+SN74189_tb.select_bar
+SN74189_tb.write_bar
+@421
+SN74189_tb.k
+@420
+SN74189_tb.myseed
+[pattern_trace] 1
+[pattern_trace] 0
