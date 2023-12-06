@@ -1,0 +1,56 @@
+#+title: SN74LS83 4-bit Binary Full Adder
+#+property: header-args :tangle SN74LS83.v
+#+auto-tangle: t
+#+startup: showeverything
+
+* DISCLAIMER :
+This README covers the logical operation of the SN74LS83, for electrical characteristics see
+https://archive.org/details/bitsavers_tidataBookVol2_45945352/page/n383/mode/2up
+* DESCRPTION :
+This is a 4-bit binary full adder, calculating the sum of two 4 bit words with a carry in and a carry out.
+* LOGIC DIAGRAM :
+[[./74LS83_LogicDiagram.jpg]]
+* PIN CONFIGURATION :
+[[./74LS83_PinConfiguration.jpg]]
+* VERILOG CODE :
+** Module :
+The SN74LS83 implements a full internal look ahead across all four bits to improve the performance of the carry generation. Currently I am using the verilog addition opperator to implement the adder, which I believe would synthesise to a ripple-carry adder. For my current use case of studying the SAP computers in simulation I don't think this difference will be important. I may rewrite the verilog for this component in the future to be more inline with the schematic.
+#+begin_src verilog
+module SN74LS83(A, B, C0, C4, S);
+   input [3:0] A;
+   input [3:0] B;
+   input C0;
+   output C4;
+   output [3:0] S;
+
+   assign {C4, S} = A + B + C0;
+endmodule
+#+end_src
+** Testbench
+#+begin_src verilog
+module SN74LS83_tb;
+   reg [3:0] a;
+   reg [3:0] b;
+   reg carry_in;
+   wire carry_out;
+   wire [3:0] sum;
+   integer myseed;
+
+   SN74LS83 DUT(a, b, carry_in, carry_out, sum);
+
+   initial
+     begin
+        $dumpfile("SN74LS83.vcd");
+        $dumpvars(0, SN74LS83_tb);
+        repeat (20)
+          begin
+             a = $random(myseed) % 16;
+             b = $random(myseed) % 16;
+             carry_in = $random(myseed) % 2;
+             #2;
+             $display ("%2d + %2d + %2d = %2d, Carry = %2d", a, b, carry_in, sum+16*carry_out, carry_out);
+          end
+     end
+   initial myseed = 314;
+endmodule
+#+end_src
