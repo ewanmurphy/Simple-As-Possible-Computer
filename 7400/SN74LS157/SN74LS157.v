@@ -17,6 +17,7 @@ module SN74LS157(A, B, Y, G_bar, SELECT);
 endmodule
 
 module SN74LS157_tb;
+   `ifdef SN74LS157_test
    reg g_bar;
    reg select;
    reg [4:1] a, b;
@@ -58,4 +59,5 @@ module SN74LS157_tb;
       #1
       $finish;
    end
+   `endif
 endmodule

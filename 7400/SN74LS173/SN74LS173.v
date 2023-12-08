@@ -18,6 +18,7 @@ module SN74LS173(D, Q, CLK, CLR, G_bar, M, N);
 endmodule
 
 module SN74LS173_tb;
+   `ifdef SN74LS173_test
    reg [4:1] d;
    reg CLK;
    reg CLR;
@@ -71,4 +72,5 @@ module SN74LS173_tb;
       $display("------------------");
       $finish;
    end
+   `endif
 endmodule

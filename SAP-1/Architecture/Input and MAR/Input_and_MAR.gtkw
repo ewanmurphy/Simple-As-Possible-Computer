@@ -1,0 +1,27 @@
+[*]
+[*] GTKWave Analyzer v3.3.117 (w)1999-2023 BSI
+[*] Fri Dec  8 11:04:50 2023
+[*]
+[dumpfile] "/home/ewan/Documents/LowLevelProgramming/Digital Electronics/Simple-As-Possible-Computer/SAP-1/Architecture/Input and MAR/Input_and_MAR_tb.vcd"
+[dumpfile_mtime] "Fri Dec  8 11:04:32 2023"
+[dumpfile_size] 1221
+[savefile] "/home/ewan/Documents/LowLevelProgramming/Digital Electronics/Simple-As-Possible-Computer/SAP-1/Architecture/Input and MAR/Input_and_MAR.gtkw"
+[timestart] 0
+[size] 1904 1001
+[pos] -1 -1
+*0.000000 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 273
+[signals_width] 214
+[sst_expanded] 1
+[sst_vpaned_height] 296
+@28
+Input_and_MAR_tb.CLK
+Input_and_MAR_tb.L_M_bar
+@22
+Input_and_MAR_tb.address[3:0]
+Input_and_MAR_tb.bus_address[3:0]
+Input_and_MAR_tb.programmer_address[3:0]
+@28
+Input_and_MAR_tb.run_or_prog
+[pattern_trace] 1
+[pattern_trace] 0

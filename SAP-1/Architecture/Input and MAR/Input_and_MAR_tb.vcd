@@ -1,0 +1,110 @@
+$date
+	Fri Dec  8 11:57:33 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module Input_and_MAR_tb $end
+$var wire 4 ! address [3:0] $end
+$var reg 1 " CLK $end
+$var reg 1 # L_M_bar $end
+$var reg 4 $ bus_address [3:0] $end
+$var reg 4 % programmer_address [3:0] $end
+$var reg 1 & run_or_prog $end
+$scope module DUT $end
+$var wire 1 " CLK $end
+$var wire 1 # L_M_bar $end
+$var wire 4 ' bus_input [3:0] $end
+$var wire 1 ( gnd $end
+$var wire 4 ) program_data [3:0] $end
+$var wire 1 & run_or_prog $end
+$var wire 4 * mar_output [3:0] $end
+$var wire 4 + address [3:0] $end
+$scope module mar $end
+$var wire 1 " CLK $end
+$var wire 1 ( CLR $end
+$var wire 4 , D [4:1] $end
+$var wire 2 - G_bar [2:1] $end
+$var wire 1 ( M $end
+$var wire 1 ( N $end
+$var wire 4 . Q [4:1] $end
+$var reg 4 / Q_store [4:1] $end
+$upscope $end
+$scope module mux $end
+$var wire 4 0 A [4:1] $end
+$var wire 4 1 B [4:1] $end
+$var wire 1 ( G_bar $end
+$var wire 1 & SELECT $end
+$var reg 4 2 Y [4:1] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx 2
+bx 1
+b111 0
+bx /
+bx .
+b0 -
+b11 ,
+bx +
+bx *
+b111 )
+0(
+b11 '
+1&
+b111 %
+b11 $
+0#
+0"
+bx !
+$end
+#1
+b11 !
+b11 +
+b11 2
+b11 *
+b11 .
+b11 1
+b11 /
+1"
+#2
+b111 !
+b111 +
+b111 2
+0"
+b11 -
+1#
+0&
+#3
+1"
+b1100 $
+b1100 '
+b1100 ,
+#4
+b11 !
+b11 +
+b11 2
+0"
+1&
+#5
+b1100 !
+b1100 +
+b1100 2
+b1100 *
+b1100 .
+b1100 1
+b1100 /
+1"
+b0 -
+0#
+#6
+0"
