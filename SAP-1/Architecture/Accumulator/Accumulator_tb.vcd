@@ -1,0 +1,169 @@
+$date
+	Fri Dec  8 16:45:42 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module Accumulator_tb $end
+$var wire 8 ! bus_output [7:0] $end
+$var wire 8 " add_sub_output [7:0] $end
+$var reg 1 # CLK $end
+$var reg 1 $ E_A $end
+$var reg 1 % L_A_bar $end
+$var reg 8 & bus_input [7:0] $end
+$scope module DUT $end
+$var wire 1 # CLK $end
+$var wire 1 $ E_A $end
+$var wire 1 % L_A_bar $end
+$var wire 8 ' bus_input [7:0] $end
+$var wire 1 ( gnd $end
+$var wire 4 ) bus_output_second_nibble [3:0] $end
+$var wire 4 * bus_output_first_nibble [3:0] $end
+$var wire 8 + bus_output [7:0] $end
+$var wire 4 , bus_input_second_nibble [3:0] $end
+$var wire 4 - bus_input_first_nibble [3:0] $end
+$var wire 8 . add_sub_output [7:0] $end
+$var wire 4 / accumulator_output_second_nibble [3:0] $end
+$var wire 4 0 accumulator_output_first_nibble [3:0] $end
+$scope module register_1 $end
+$var wire 1 # CLK $end
+$var wire 1 ( CLR $end
+$var wire 4 1 D [4:1] $end
+$var wire 2 2 G_bar [2:1] $end
+$var wire 1 ( M $end
+$var wire 1 ( N $end
+$var wire 4 3 Q [4:1] $end
+$var reg 4 4 Q_store [4:1] $end
+$upscope $end
+$scope module register_2 $end
+$var wire 1 # CLK $end
+$var wire 1 ( CLR $end
+$var wire 4 5 D [4:1] $end
+$var wire 2 6 G_bar [2:1] $end
+$var wire 1 ( M $end
+$var wire 1 ( N $end
+$var wire 4 7 Q [4:1] $end
+$var reg 4 8 Q_store [4:1] $end
+$upscope $end
+$scope module tri_1 $end
+$var wire 4 9 A [4:1] $end
+$var wire 4 : G [4:1] $end
+$var wire 4 ; Y [4:1] $end
+$upscope $end
+$scope module tri_2 $end
+$var wire 4 < A [4:1] $end
+$var wire 4 = G [4:1] $end
+$var wire 4 > Y [4:1] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bz >
+b0 =
+bx <
+bz ;
+b0 :
+bx 9
+bx 8
+bx 7
+b0 6
+b1010 5
+bx 4
+bx 3
+b0 2
+b1100 1
+bx 0
+bx /
+bx .
+b1100 -
+b1010 ,
+bz +
+bz *
+bz )
+0(
+b10101100 '
+b10101100 &
+0%
+0$
+0#
+bx "
+bz !
+$end
+#1
+b1100 0
+b1100 3
+b1100 9
+b10101100 "
+b10101100 .
+b1010 /
+b1010 7
+b1010 <
+b1100 4
+b1010 8
+b1100 *
+b1100 ;
+b10101100 !
+b10101100 +
+b1010 )
+b1010 >
+b1111 :
+b1111 =
+1$
+1#
+#2
+b11 2
+b11 6
+1%
+0#
+#3
+b1111 ,
+b1111 5
+b1 -
+b1 1
+b11110001 &
+b11110001 '
+1#
+#4
+b0 2
+b0 6
+0%
+0#
+#5
+b1 *
+b1 ;
+b11110001 !
+b11110001 +
+b1111 )
+b1111 >
+b1 0
+b1 3
+b1 9
+b11110001 "
+b11110001 .
+b1111 /
+b1111 7
+b1111 <
+b1 4
+b1111 8
+1#
+#6
+bz *
+bz ;
+bz !
+bz +
+bz )
+bz >
+0#
+b0 :
+b0 =
+0$
+#7
+1#

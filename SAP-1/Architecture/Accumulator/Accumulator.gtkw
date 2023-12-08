@@ -1,0 +1,26 @@
+[*]
+[*] GTKWave Analyzer v3.3.117 (w)1999-2023 BSI
+[*] Fri Dec  8 16:37:06 2023
+[*]
+[dumpfile] "/home/ewan/Documents/LowLevelProgramming/Digital Electronics/Simple-As-Possible-Computer/SAP-1/Architecture/Accumulator/Accumulator_tb.vcd"
+[dumpfile_mtime] "Fri Dec  8 16:36:49 2023"
+[dumpfile_size] 2149
+[savefile] "/home/ewan/Documents/LowLevelProgramming/Digital Electronics/Simple-As-Possible-Computer/SAP-1/Architecture/Accumulator/Accumulator.gtkw"
+[timestart] 0
+[size] 1904 1001
+[pos] -1 -1
+*0.000000 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 273
+[signals_width] 182
+[sst_expanded] 1
+[sst_vpaned_height] 296
+@28
+Accumulator_tb.CLK
+Accumulator_tb.E_A
+Accumulator_tb.L_A_bar
+@22
+Accumulator_tb.add_sub_output[7:0]
+Accumulator_tb.bus_input[7:0]
+Accumulator_tb.bus_output[7:0]
+[pattern_trace] 1
+[pattern_trace] 0

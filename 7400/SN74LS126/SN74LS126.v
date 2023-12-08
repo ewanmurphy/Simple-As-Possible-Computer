@@ -1,14 +1,17 @@
-module SN74LS126(
-    input A1,G1, A2,G2, A3,G3, A4,G4,
-    output Y1, Y2, Y3, Y4);
+module SN74LS126(A, G, Y);
+   input [4:1] A;
+   input [4:1] G;
+   output [4:1] Y;
 
-   assign Y1 = G1 ? A1 : 1'bZ;
-   assign Y2 = G2 ? A2 : 1'bZ;
-   assign Y3 = G3 ? A3 : 1'bZ;
-   assign Y4 = G4 ? A4 : 1'bZ;
+
+   assign Y[1] = G[1] ? A[1] : 1'bZ;
+   assign Y[2] = G[2] ? A[2] : 1'bZ;
+   assign Y[3] = G[3] ? A[3] : 1'bZ;
+   assign Y[4] = G[4] ? A[4] : 1'bZ;
 endmodule
 
 module SN74LS126_tb;
+   `ifdef SN74LS126_test
    reg [4:1] a;
    reg [4:1] g;
    wire [4:1] y;
@@ -38,6 +41,6 @@ module SN74LS126_tb;
         for (int i=0; i<4; i=i+1) begin
             {g[4], a[4]} = i; #5;
         end
-   end // initial begin
-
+   end
+   `endif
 endmodule

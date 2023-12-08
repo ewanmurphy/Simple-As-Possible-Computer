@@ -32,7 +32,7 @@ module B_Register_tb;
       // Waveform generation
       $dumpfile("B_Register_tb.vcd");
       $dumpvars(0, B_Register_tb);
-      // Enable loading instructions into the B register
+      // Enable loading data into the B register
       L_B_bar = 0;
       // Set bus value
       bus_input = 8'hAC;
@@ -41,13 +41,13 @@ module B_Register_tb;
    end
    initial begin
       #2;
-      // Disable loading instructions into the B register
+      // Disable loading data into the B register
       L_B_bar = 1;
       #1;
       // Set bus value
       bus_input = 8'hF1;
       #1;
-      // Enable loading instructions into the B register
+      // Enable loading data into the B register
       L_B_bar = 0;
       #2;
       $finish;
