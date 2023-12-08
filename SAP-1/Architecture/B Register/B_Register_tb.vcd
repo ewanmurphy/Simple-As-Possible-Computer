@@ -1,0 +1,112 @@
+$date
+	Fri Dec  8 14:08:34 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module B_Register_tb $end
+$var wire 8 ! add_sub_output [7:0] $end
+$var reg 1 " CLK $end
+$var reg 1 # L_B_bar $end
+$var reg 8 $ bus_input [7:0] $end
+$scope module DUT $end
+$var wire 1 " CLK $end
+$var wire 1 # L_B_bar $end
+$var wire 8 % bus_input [7:0] $end
+$var wire 1 & gnd $end
+$var wire 4 ' bus_input_second_nibble [3:0] $end
+$var wire 4 ( bus_input_first_nibble [3:0] $end
+$var wire 4 ) add_sub_output_second_nibble [3:0] $end
+$var wire 4 * add_sub_output_first_nibble [3:0] $end
+$var wire 8 + add_sub_output [7:0] $end
+$scope module register_1 $end
+$var wire 1 " CLK $end
+$var wire 1 & CLR $end
+$var wire 4 , D [4:1] $end
+$var wire 2 - G_bar [2:1] $end
+$var wire 1 & M $end
+$var wire 1 & N $end
+$var wire 4 . Q [4:1] $end
+$var reg 4 / Q_store [4:1] $end
+$upscope $end
+$scope module register_2 $end
+$var wire 1 " CLK $end
+$var wire 1 & CLR $end
+$var wire 4 0 D [4:1] $end
+$var wire 2 1 G_bar [2:1] $end
+$var wire 1 & M $end
+$var wire 1 & N $end
+$var wire 4 2 Q [4:1] $end
+$var reg 4 3 Q_store [4:1] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx 3
+bx 2
+b0 1
+b1010 0
+bx /
+bx .
+b0 -
+b1100 ,
+bx +
+bx *
+bx )
+b1100 (
+b1010 '
+0&
+b10101100 %
+b10101100 $
+0#
+0"
+bx !
+$end
+#1
+b1100 *
+b1100 .
+b10101100 !
+b10101100 +
+b1010 )
+b1010 2
+b1100 /
+b1010 3
+1"
+#2
+0"
+b11 -
+b11 1
+1#
+#3
+b1111 '
+b1111 0
+b1 (
+b1 ,
+1"
+b11110001 $
+b11110001 %
+#4
+0"
+b0 -
+b0 1
+0#
+#5
+b1 *
+b1 .
+b11110001 !
+b11110001 +
+b1111 )
+b1111 2
+b1 /
+b1111 3
+1"
+#6
+0"
