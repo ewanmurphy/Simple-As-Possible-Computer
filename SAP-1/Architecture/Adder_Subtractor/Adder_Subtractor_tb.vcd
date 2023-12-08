@@ -1,0 +1,149 @@
+$date
+	Fri Dec  8 17:30:38 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module Adder_Subtractor_tb $end
+$var wire 8 ! bus_output [7:0] $end
+$var reg 1 " E_U $end
+$var reg 1 # S_U $end
+$var reg 8 $ a_input [7:0] $end
+$var reg 8 % b_input [7:0] $end
+$scope module DUT $end
+$var wire 1 " E_U $end
+$var wire 1 # S_U $end
+$var wire 8 & a_input [7:0] $end
+$var wire 8 ' b_input [7:0] $end
+$var wire 1 ( gnd $end
+$var wire 4 ) result_second_nibble [3:0] $end
+$var wire 4 * result_first_nibble [3:0] $end
+$var wire 1 + carry_between_nibbles $end
+$var wire 4 , bus_output_second_nibble [3:0] $end
+$var wire 4 - bus_output_first_nibble [3:0] $end
+$var wire 8 . bus_output [7:0] $end
+$var wire 4 / b_input_second_nibble [3:0] $end
+$var wire 4 0 b_input_first_nibble [3:0] $end
+$var wire 4 1 a_input_second_nibble [3:0] $end
+$var wire 4 2 a_input_first_nibble [3:0] $end
+$scope module adder_1 $end
+$var wire 4 3 A [3:0] $end
+$var wire 4 4 B [3:0] $end
+$var wire 1 # C0 $end
+$var wire 4 5 S [3:0] $end
+$var wire 1 + C4 $end
+$upscope $end
+$scope module adder_2 $end
+$var wire 4 6 A [3:0] $end
+$var wire 4 7 B [3:0] $end
+$var wire 1 + C0 $end
+$var wire 4 8 S [3:0] $end
+$var wire 1 9 C4 $end
+$upscope $end
+$scope module tri_1 $end
+$var wire 4 : A [4:1] $end
+$var wire 4 ; G [4:1] $end
+$var wire 4 < Y [4:1] $end
+$upscope $end
+$scope module tri_2 $end
+$var wire 4 = A [4:1] $end
+$var wire 4 > G [4:1] $end
+$var wire 4 ? Y [4:1] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b1010 ?
+b1111 >
+b1010 =
+b0 <
+b1111 ;
+b0 :
+09
+b1010 8
+b10 7
+b1000 6
+b0 5
+b0 4
+b0 3
+b0 2
+b1000 1
+b0 0
+b10 /
+b10100000 .
+b0 -
+b1010 ,
+0+
+b0 *
+b1010 )
+0(
+b100000 '
+b10000000 &
+b100000 %
+b10000000 $
+0#
+1"
+b10100000 !
+$end
+#1
+bz -
+bz <
+bz !
+bz .
+bz ,
+bz ?
+b0 ;
+b0 >
+0"
+#2
+b1110 )
+b1110 8
+b1110 =
+b1000 *
+b1000 5
+b1000 :
+b1100 1
+b1100 6
+b1000 2
+b1000 3
+b11001000 $
+b11001000 &
+#3
+b1000 -
+b1000 <
+b11101000 !
+b11101000 .
+b1110 ,
+b1110 ?
+b1111 ;
+b1111 >
+1"
+#4
+b1010 ,
+b1010 ?
+b1010 )
+b1010 8
+b1010 =
+19
+1+
+b10101000 !
+b10101000 .
+b1000 -
+b1000 <
+b1101 /
+b1101 7
+b1111 0
+b1111 4
+b1000 *
+b1000 5
+b1000 :
+1#
+#5

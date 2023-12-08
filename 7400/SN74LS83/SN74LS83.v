@@ -9,6 +9,7 @@ module SN74LS83(A, B, C0, C4, S);
 endmodule
 
 module SN74LS83_tb;
+   `ifdef SN74LS83_test
    reg [3:0] a;
    reg [3:0] b;
    reg carry_in;
@@ -32,4 +33,5 @@ module SN74LS83_tb;
           end
      end
    initial myseed = 314;
+   `endif
 endmodule

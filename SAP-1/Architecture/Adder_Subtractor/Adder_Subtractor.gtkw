@@ -1,0 +1,24 @@
+[*]
+[*] GTKWave Analyzer v3.3.117 (w)1999-2023 BSI
+[*] Fri Dec  8 17:26:39 2023
+[*]
+[dumpfile] "/home/ewan/Documents/LowLevelProgramming/Digital Electronics/Simple-As-Possible-Computer/SAP-1/Architecture/Adder_Subtractor/Adder_Subtractor_tb.vcd"
+[dumpfile_mtime] "Fri Dec  8 17:26:21 2023"
+[dumpfile_size] 1829
+[savefile] "/home/ewan/Documents/LowLevelProgramming/Digital Electronics/Simple-As-Possible-Computer/SAP-1/Architecture/Adder_Subtractor/Adder_Subtractor.gtkw"
+[timestart] 0
+[size] 1904 1001
+[pos] -1 -1
+*0.000000 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 273
+[signals_width] 179
+[sst_expanded] 1
+[sst_vpaned_height] 296
+@25
+Adder_Subtractor_tb.a_input[7:0]
+Adder_Subtractor_tb.b_input[7:0]
+Adder_Subtractor_tb.bus_output[7:0]
+Adder_Subtractor_tb.E_U
+Adder_Subtractor_tb.S_U
+[pattern_trace] 1
+[pattern_trace] 0
