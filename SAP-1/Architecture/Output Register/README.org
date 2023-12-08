@@ -8,20 +8,66 @@
 At the end of a computer run, the accumulator contains the answer to the problem being solved. At this point, we need to transfer the answer to the outside world. This is where the output register is used. When E_A is high and L_O_bar is low, the next positive clock edge loads the accumulator word into the output register.
 The output register is often called an output port because procedded data can leave the computer through this register. In microcomputers the output ports are connected to interface circuits that drive peripheral devices like printers, cathode-ray tubes, teletypewriters, and so forth. (An interface circuit prepares the data to drive each device.)
 * LOGIC DIAGRAM :
-* TRUTH TABLE :
-* PIN CONFIGURATION :
+[[./Output_Register_LogicDiagram.jpg]]
 * VERILOG CODE :
 ** Module :
+I have implemented the Output Register block of the SAP-1 architecture using the SN74LS173 component as described in the above schematic. To my knowledge the open circles next to the ports of components on a schematic diagram are to indicate that the input signal should be inverted. This can be seen on ports 1,2,9 and 10 on component SN74LS173. However, when comparing the intended function of the Output Register block with the logic of these components I found I needed to remove all the inversions to produce correct operation, this is reflected in the verilog code below. I am not sure if this is an error in my understand, my implementation of these components or the schematic diagram but this is what I have had to do to make it work so far.
 #+begin_src verilog
-module Output_Register(L_O_bar, CLK, bus_input, display_output);
-    input L_O_bar;
-    input CLK;
-    input [7:0] bus_input;
-    output [7:0] display_output;
+`include "../../../7400/SN74LS173/SN74LS173.v"
+module Output_Register(bus_input, L_O_bar, CLK, display_output);
+   input L_O_bar;
+   input CLK;
+   input [7:0] bus_input;
+   output [7:0] display_output;
+
+   wire [3:0] bus_input_first_nibble;
+   wire [3:0] bus_input_second_nibble;
+   assign {bus_input_second_nibble, bus_input_first_nibble} = bus_input;
+
+   wire [3:0] display_output_first_nibble;
+   wire [3:0] display_output_second_nibble;
+   assign display_output = {display_output_second_nibble, display_output_first_nibble};
+
+   wire gnd = 0;
+
+   SN74LS173 register_1(.D(bus_input_first_nibble), .Q(display_output_first_nibble), .CLK(CLK), .CLR(gnd), .G_bar({2{L_O_bar}}), .M(gnd), .N(gnd));
+   SN74LS173 register_2(.D(bus_input_second_nibble), .Q(display_output_second_nibble), .CLK(CLK), .CLR(gnd), .G_bar({2{L_O_bar}}), .M(gnd), .N(gnd));
 endmodule
 #+end_src
 ** Testbench
 #+begin_src verilog
 module Output_Register_tb;
+   `ifdef Output_Register_test
+   reg [7:0] bus_input;
+   reg L_O_bar;
+   reg CLK;
+   wire [7:0] display_output;
+   Output_Register DUT(bus_input, L_O_bar, CLK, display_output);
+
+   initial begin
+      // Waveform generation
+      $dumpfile("Output_Register_tb.vcd");
+      $dumpvars(0, Output_Register_tb);
+      // Enable loading instructions into the Output register
+      L_O_bar = 0;
+      // Set bus value
+      bus_input = 8'h32;
+      CLK = 0;
+      forever #1 CLK = ~CLK;
+   end
+   initial begin
+      #2;
+      // Disable loading instructions into the Output register
+      L_O_bar = 1;
+      #1;
+      // Set bus value
+      bus_input = 8'hD8;
+      #1;
+      // Enable loading instructions into the Output register
+      L_O_bar = 0;
+      #2;
+      $finish;
+   end
+   `endif
 endmodule
 #+end_src
