@@ -1,0 +1,25 @@
+[*]
+[*] GTKWave Analyzer v3.3.117 (w)1999-2023 BSI
+[*] Sat Dec  9 10:25:19 2023
+[*]
+[dumpfile] "/home/ewan/Documents/LowLevelProgramming/Digital Electronics/Simple-As-Possible-Computer/SAP-1/Architecture/Program Counter/Program_Counter_tb.vcd"
+[dumpfile_mtime] "Sat Dec  9 10:25:12 2023"
+[dumpfile_size] 3371
+[savefile] "/home/ewan/Documents/LowLevelProgramming/Digital Electronics/Simple-As-Possible-Computer/SAP-1/Architecture/Program Counter/Program_Counter.gtkw"
+[timestart] 0
+[size] 1904 1001
+[pos] -1 -1
+*-3.000000 13 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 273
+[signals_width] 126
+[sst_expanded] 1
+[sst_vpaned_height] 296
+@28
+Program_Counter_tb.CLK_bar
+Program_Counter_tb.CLR_bar
+Program_Counter_tb.C_P
+Program_Counter_tb.E_P
+@22
+Program_Counter_tb.address[3:0]
+[pattern_trace] 1
+[pattern_trace] 0

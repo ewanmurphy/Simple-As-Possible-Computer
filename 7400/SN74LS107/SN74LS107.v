@@ -16,18 +16,19 @@ module JK_FlipFlop(CLR_bar, CLK, J, K, Q, Q_bar);
       end
    end
 endmodule
-module SN74LS107(CLK, CLR_bar_1, J_1, K_1, Q_1, Q_bar_1, CLR_bar_2, J_2, K_2, Q_2, Q_bar_2);
-   input CLK;
+module SN74LS107(CLK_1, CLR_bar_1, J_1, K_1, Q_1, Q_bar_1, CLK_2, CLR_bar_2, J_2, K_2, Q_2, Q_bar_2);
+   input CLK_1, CLK_2;
    input CLR_bar_1, CLR_bar_2;
    input J_1, J_2;
    input K_1, K_2;
    output Q_1, Q_bar_1, Q_2, Q_bar_2;
 
-   JK_FlipFlop FF_1(.CLR_bar(CLR_bar_1), .CLK(CLK), .J(J_1), .K(K_1), .Q(Q_1), .Q_bar(Q_bar_1));
-   JK_FlipFlop FF_2(.CLR_bar(CLR_bar_2), .CLK(CLK), .J(J_2), .K(K_2), .Q(Q_2), .Q_bar(Q_bar_2));
+   JK_FlipFlop FF_1(.CLR_bar(CLR_bar_1), .CLK(CLK_1), .J(J_1), .K(K_1), .Q(Q_1), .Q_bar(Q_bar_1));
+   JK_FlipFlop FF_2(.CLR_bar(CLR_bar_2), .CLK(CLK_2), .J(J_2), .K(K_2), .Q(Q_2), .Q_bar(Q_bar_2));
 endmodule
 
 module SN74LS107_tb;
+   `ifdef SN74LS107_test
    reg CLK;
    reg CLR_bar_1, J_1, K_1;
    wire Q_1, Q_bar_1;
@@ -35,9 +36,8 @@ module SN74LS107_tb;
    wire Q_2, Q_bar_2;
 
 
-   SN74LS107 DUT(.CLK(CLK),
-                 .CLR_bar_1(CLR_bar_1), .J_1(J_1), .K_1(K_1), .Q_1(Q_1), .Q_bar_1(Q_bar_1),
-                 .CLR_bar_2(CLR_bar_2), .J_2(J_2), .K_2(K_2), .Q_2(Q_2), .Q_bar_2(Q_bar_2));
+   SN74LS107 DUT(.CLK_1(CLK), .CLR_bar_1(CLR_bar_1), .J_1(J_1), .K_1(K_1), .Q_1(Q_1), .Q_bar_1(Q_bar_1),
+                 .CLK_2(CLK), .CLR_bar_2(CLR_bar_2), .J_2(J_2), .K_2(K_2), .Q_2(Q_2), .Q_bar_2(Q_bar_2));
    initial begin
       CLK=0;
       forever #1 CLK = ~CLK;
@@ -74,4 +74,5 @@ module SN74LS107_tb;
       #2
       $finish;
    end
+   `endif
 endmodule
