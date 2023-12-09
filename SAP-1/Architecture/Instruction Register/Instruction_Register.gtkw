@@ -1,0 +1,27 @@
+[*]
+[*] GTKWave Analyzer v3.3.117 (w)1999-2023 BSI
+[*] Sat Dec  9 11:06:41 2023
+[*]
+[dumpfile] "/home/ewan/Documents/LowLevelProgramming/Digital Electronics/Simple-As-Possible-Computer/SAP-1/Architecture/Instruction Register/Instruction_Register_tb.vcd"
+[dumpfile_mtime] "Sat Dec  9 11:06:30 2023"
+[dumpfile_size] 1507
+[savefile] "/home/ewan/Documents/LowLevelProgramming/Digital Electronics/Simple-As-Possible-Computer/SAP-1/Architecture/Instruction Register/Instruction_Register.gtkw"
+[timestart] 0
+[size] 1904 1001
+[pos] -1 -1
+*-2.239188 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 273
+[signals_width] 158
+[sst_expanded] 1
+[sst_vpaned_height] 296
+@28
+Instruction_Register_tb.CLK
+Instruction_Register_tb.CLR
+Instruction_Register_tb.E_I_bar
+Instruction_Register_tb.L_I_bar
+@22
+Instruction_Register_tb.bus_input[7:0]
+Instruction_Register_tb.data[3:0]
+Instruction_Register_tb.instruction[3:0]
+[pattern_trace] 1
+[pattern_trace] 0
