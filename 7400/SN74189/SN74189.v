@@ -16,6 +16,7 @@ module SN74189(A, DI, DO, S_bar, W_bar);
 endmodule
 
 module SN74189_tb;
+   `ifdef SN74189_test
    reg [3:0] address;
    wire [3:0] data_out;
    reg [3:0] data_in;
@@ -39,6 +40,9 @@ module SN74189_tb;
              #2;
              $display ("Address : %2d, Data: %2d", address, ~data_out);
           end
+        select_bar = 1;
+        #5;
      end
    initial myseed = 314;
+   `endif
 endmodule

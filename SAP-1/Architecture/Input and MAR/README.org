@@ -52,7 +52,6 @@ module Input_and_MAR_tb;
       // Waveform generation
       $dumpfile("Input_and_MAR_tb.vcd");
       $dumpvars(0, Input_and_MAR_tb);
-      $display("Hello World");
       // Enable Loading instructions in the MAR
       L_M_bar = 0;
       // Set the mux to load the intruction from the MAR

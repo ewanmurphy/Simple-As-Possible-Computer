@@ -1,0 +1,52 @@
+[*]
+[*] GTKWave Analyzer v3.3.117 (w)1999-2023 BSI
+[*] Sat Dec  9 09:26:40 2023
+[*]
+[dumpfile] "/home/ewan/Documents/LowLevelProgramming/Digital Electronics/Simple-As-Possible-Computer/SAP-1/Architecture/RAM 16x8/RAM_16x8_tb.vcd"
+[dumpfile_mtime] "Sat Dec  9 09:21:22 2023"
+[dumpfile_size] 4693
+[savefile] "/home/ewan/Documents/LowLevelProgramming/Digital Electronics/Simple-As-Possible-Computer/SAP-1/Architecture/RAM 16x8/RAM_16x8.gtkw"
+[timestart] 0
+[size] 1904 1001
+[pos] -1 -1
+*-3.156726 14 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 273
+[signals_width] 249
+[sst_expanded] 1
+[sst_vpaned_height] 296
+@22
+RAM_16x8_tb.address[3:0]
+@c00025
+RAM_16x8_tb.memory_value[7:0]
+@28
+(0)RAM_16x8_tb.memory_value[7:0]
+(1)RAM_16x8_tb.memory_value[7:0]
+(2)RAM_16x8_tb.memory_value[7:0]
+(3)RAM_16x8_tb.memory_value[7:0]
+(4)RAM_16x8_tb.memory_value[7:0]
+(5)RAM_16x8_tb.memory_value[7:0]
+(6)RAM_16x8_tb.memory_value[7:0]
+(7)RAM_16x8_tb.memory_value[7:0]
+@1401201
+-group_end
+@28
+RAM_16x8_tb.CE_bar
+RAM_16x8_tb.read_or_write
+RAM_16x8_tb.run_or_prog
+@c00022
+RAM_16x8_tb.programmer_data[7:0]
+@28
+(0)RAM_16x8_tb.programmer_data[7:0]
+(1)RAM_16x8_tb.programmer_data[7:0]
+(2)RAM_16x8_tb.programmer_data[7:0]
+(3)RAM_16x8_tb.programmer_data[7:0]
+(4)RAM_16x8_tb.programmer_data[7:0]
+(5)RAM_16x8_tb.programmer_data[7:0]
+(6)RAM_16x8_tb.programmer_data[7:0]
+(7)RAM_16x8_tb.programmer_data[7:0]
+@1401200
+-group_end
+@420
+RAM_16x8_tb.k
+[pattern_trace] 1
+[pattern_trace] 0
