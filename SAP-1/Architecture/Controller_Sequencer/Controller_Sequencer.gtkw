@@ -1,0 +1,39 @@
+[*]
+[*] GTKWave Analyzer v3.3.117 (w)1999-2023 BSI
+[*] Wed Dec 13 14:19:48 2023
+[*]
+[dumpfile] "/home/ewan/Documents/LowLevelProgramming/Digital Electronics/Simple-As-Possible-Computer/SAP-1/Architecture/Controller_Sequencer/Controller_Sequencer_tb.vcd"
+[dumpfile_mtime] "Wed Dec 13 14:19:20 2023"
+[dumpfile_size] 7844
+[savefile] "/home/ewan/Documents/LowLevelProgramming/Digital Electronics/Simple-As-Possible-Computer/SAP-1/Architecture/Controller_Sequencer/Controller_Sequencer.gtkw"
+[timestart] 0
+[size] 1350 689
+[pos] -1 -1
+*-2.823677 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] Controller_Sequencer_tb.
+[sst_width] 273
+[signals_width] 158
+[sst_expanded] 1
+[sst_vpaned_height] 429
+@22
+Controller_Sequencer_tb.instruction[7:4]
+@28
+Controller_Sequencer_tb.CLK
+Controller_Sequencer_tb.CLR_bar
+Controller_Sequencer_tb.C_P
+Controller_Sequencer_tb.E_P
+Controller_Sequencer_tb.L_M_bar
+Controller_Sequencer_tb.CE_bar
+Controller_Sequencer_tb.L_I_bar
+Controller_Sequencer_tb.E_I_bar
+Controller_Sequencer_tb.L_A_bar
+Controller_Sequencer_tb.E_A
+Controller_Sequencer_tb.S_U
+Controller_Sequencer_tb.E_U
+Controller_Sequencer_tb.L_B_bar
+Controller_Sequencer_tb.L_O_bar
+Controller_Sequencer_tb.HLT_bar
+@23
+Controller_Sequencer_tb.DUT.T[6:1]
+[pattern_trace] 1
+[pattern_trace] 0

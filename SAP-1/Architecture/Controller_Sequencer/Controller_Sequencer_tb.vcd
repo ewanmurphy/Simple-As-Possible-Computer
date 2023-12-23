@@ -1,0 +1,1266 @@
+$date
+	Sat Dec 23 20:11:16 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module Controller_Sequencer_tb $end
+$var wire 1 ! S_U $end
+$var wire 1 " L_O_bar $end
+$var wire 1 # L_M_bar $end
+$var wire 1 $ L_I_bar $end
+$var wire 1 % L_B_bar $end
+$var wire 1 & L_A_bar $end
+$var wire 1 ' HLT_bar $end
+$var wire 1 ( E_U $end
+$var wire 1 ) E_P $end
+$var wire 1 * E_I_bar $end
+$var wire 1 + E_A $end
+$var wire 1 , C_P $end
+$var wire 1 - CE_bar $end
+$var reg 1 . CLK $end
+$var reg 1 / CLR_bar $end
+$var reg 12 0 CON [11:0] $end
+$var reg 4 1 instruction [7:4] $end
+$var integer 32 2 k [31:0] $end
+$scope module DUT $end
+$var wire 1 3 ADD $end
+$var wire 1 . CLK $end
+$var wire 1 / CLR_bar $end
+$var wire 1 + E_A $end
+$var wire 1 ' HLT_bar $end
+$var wire 1 4 LDA $end
+$var wire 1 $ L_I_bar $end
+$var wire 1 " L_O_bar $end
+$var wire 1 5 OUT $end
+$var wire 1 6 SUB $end
+$var wire 1 ! S_U $end
+$var wire 4 7 instruction [7:4] $end
+$var wire 4 8 not_instruction [7:4] $end
+$var wire 6 9 T [6:1] $end
+$var wire 6 : Q_bar [6:1] $end
+$var wire 6 ; Q [6:1] $end
+$var wire 1 # L_M_bar $end
+$var wire 1 % L_B_bar $end
+$var wire 1 & L_A_bar $end
+$var wire 1 ( E_U $end
+$var wire 1 ) E_P $end
+$var wire 1 * E_I_bar $end
+$var wire 1 , C_P $end
+$var wire 1 - CE_bar $end
+$scope module dualFF_1 $end
+$var wire 1 < CLK_1 $end
+$var wire 1 = CLK_2 $end
+$var wire 1 / CLR_bar_1 $end
+$var wire 1 / CLR_bar_2 $end
+$var wire 1 > J_1 $end
+$var wire 1 ? J_2 $end
+$var wire 1 @ K_1 $end
+$var wire 1 A K_2 $end
+$var wire 1 B Q_bar_2 $end
+$var wire 1 C Q_bar_1 $end
+$var wire 1 D Q_2 $end
+$var wire 1 E Q_1 $end
+$scope module FF_1 $end
+$var wire 1 < CLK $end
+$var wire 1 / CLR_bar $end
+$var wire 1 > J $end
+$var wire 1 @ K $end
+$var reg 1 E Q $end
+$var reg 1 C Q_bar $end
+$upscope $end
+$scope module FF_2 $end
+$var wire 1 = CLK $end
+$var wire 1 / CLR_bar $end
+$var wire 1 ? J $end
+$var wire 1 A K $end
+$var reg 1 D Q $end
+$var reg 1 B Q_bar $end
+$upscope $end
+$upscope $end
+$scope module dualFF_2 $end
+$var wire 1 F CLK_1 $end
+$var wire 1 G CLK_2 $end
+$var wire 1 / CLR_bar_1 $end
+$var wire 1 / CLR_bar_2 $end
+$var wire 1 H J_1 $end
+$var wire 1 I J_2 $end
+$var wire 1 J K_1 $end
+$var wire 1 K K_2 $end
+$var wire 1 L Q_bar_2 $end
+$var wire 1 M Q_bar_1 $end
+$var wire 1 N Q_2 $end
+$var wire 1 O Q_1 $end
+$scope module FF_1 $end
+$var wire 1 F CLK $end
+$var wire 1 / CLR_bar $end
+$var wire 1 H J $end
+$var wire 1 J K $end
+$var reg 1 O Q $end
+$var reg 1 M Q_bar $end
+$upscope $end
+$scope module FF_2 $end
+$var wire 1 G CLK $end
+$var wire 1 / CLR_bar $end
+$var wire 1 I J $end
+$var wire 1 K K $end
+$var reg 1 N Q $end
+$var reg 1 L Q_bar $end
+$upscope $end
+$upscope $end
+$scope module dualFF_3 $end
+$var wire 1 P CLK_1 $end
+$var wire 1 Q CLK_2 $end
+$var wire 1 / CLR_bar_1 $end
+$var wire 1 / CLR_bar_2 $end
+$var wire 1 R J_1 $end
+$var wire 1 S J_2 $end
+$var wire 1 T K_1 $end
+$var wire 1 U K_2 $end
+$var wire 1 V Q_bar_2 $end
+$var wire 1 W Q_bar_1 $end
+$var wire 1 X Q_2 $end
+$var wire 1 Y Q_1 $end
+$scope module FF_1 $end
+$var wire 1 P CLK $end
+$var wire 1 / CLR_bar $end
+$var wire 1 R J $end
+$var wire 1 T K $end
+$var reg 1 Y Q $end
+$var reg 1 W Q_bar $end
+$upscope $end
+$scope module FF_2 $end
+$var wire 1 Q CLK $end
+$var wire 1 / CLR_bar $end
+$var wire 1 S J $end
+$var wire 1 U K $end
+$var reg 1 X Q $end
+$var reg 1 V Q_bar $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+xY
+xX
+xW
+xV
+xU
+xT
+xS
+xR
+1Q
+1P
+xO
+xN
+xM
+xL
+xK
+xJ
+xI
+xH
+1G
+1F
+xE
+xD
+xC
+xB
+xA
+x@
+x?
+x>
+1=
+1<
+bx ;
+bx :
+bx 9
+bx 8
+bx 7
+x6
+x5
+x4
+x3
+bx 2
+bx 1
+bx 0
+1/
+0.
+x-
+x,
+x+
+x*
+x)
+x(
+x'
+x&
+x%
+x$
+x#
+x"
+x!
+$end
+#1
+1"
+1%
+0(
+0!
+0+
+1&
+1*
+1$
+1-
+0#
+1)
+0,
+1?
+0A
+1J
+0H
+1K
+0I
+1T
+0R
+1U
+0S
+1>
+0@
+b1 9
+1C
+0E
+1B
+0D
+1M
+0O
+1L
+0N
+1W
+0Y
+b111111 :
+1V
+b0 ;
+0X
+0/
+#2
+1/
+0<
+0=
+0F
+0G
+0P
+0Q
+1.
+#3
+1#
+0)
+1,
+0?
+1A
+0J
+1H
+b10 9
+0C
+1E
+b111100 :
+0B
+b11 ;
+1D
+0'
+03
+04
+06
+05
+b0 8
+b10111100011 0
+b0 2
+b1111 1
+b1111 7
+1<
+1=
+1F
+1G
+1P
+1Q
+0.
+#4
+0<
+0=
+0F
+0G
+0P
+0Q
+1.
+#5
+0$
+0-
+0,
+1J
+0H
+0K
+1I
+b100 9
+1B
+0D
+b111010 :
+0M
+b101 ;
+1O
+1<
+1=
+1F
+1G
+1P
+1Q
+0.
+b101111100011 0
+b1 2
+#6
+0<
+0=
+0F
+0G
+0P
+0Q
+1.
+#7
+1$
+1-
+1K
+0I
+0T
+1R
+b1000 9
+1M
+0O
+b110110 :
+0L
+b1001 ;
+1N
+1<
+1=
+1F
+1G
+1P
+1Q
+0.
+b1001100011 0
+b10 2
+#8
+0<
+0=
+0F
+0G
+0P
+0Q
+1.
+#9
+1T
+0R
+0U
+1S
+b10000 9
+1L
+0N
+b101110 :
+0W
+b10001 ;
+1Y
+1<
+1=
+1F
+1G
+1P
+1Q
+0.
+b1111100011 0
+b11 2
+#10
+0<
+0=
+0F
+0G
+0P
+0Q
+1.
+#11
+1U
+0S
+0>
+1@
+b100000 9
+1W
+0Y
+b11110 :
+0V
+b100001 ;
+1X
+1<
+1=
+1F
+1G
+1P
+1Q
+0.
+b100 2
+#12
+0<
+0=
+0F
+0G
+0P
+0Q
+1.
+#13
+0#
+1)
+1?
+0A
+1>
+0@
+b1 9
+1C
+0E
+b111111 :
+1V
+b0 ;
+0X
+1<
+1=
+1F
+1G
+1P
+1Q
+0.
+b101 2
+#14
+0<
+0=
+0F
+0G
+0P
+0Q
+1.
+#15
+1#
+0)
+1,
+0?
+1A
+0J
+1H
+b10 9
+0C
+1E
+b111100 :
+0B
+b11 ;
+1D
+14
+1'
+b1111 8
+1<
+1=
+1F
+1G
+1P
+1Q
+0.
+b10111100011 0
+b0 1
+b0 7
+b0 2
+#16
+0<
+0=
+0F
+0G
+0P
+0Q
+1.
+#17
+0$
+0-
+0,
+1J
+0H
+0K
+1I
+b100 9
+1B
+0D
+b111010 :
+0M
+b101 ;
+1O
+1<
+1=
+1F
+1G
+1P
+1Q
+0.
+b101111100011 0
+b1 2
+#18
+0<
+0=
+0F
+0G
+0P
+0Q
+1.
+#19
+0*
+1$
+0#
+1-
+1K
+0I
+0T
+1R
+b1000 9
+1M
+0O
+b110110 :
+0L
+b1001 ;
+1N
+1<
+1=
+1F
+1G
+1P
+1Q
+0.
+b1001100011 0
+b10 2
+#20
+0<
+0=
+0F
+0G
+0P
+0Q
+1.
+#21
+0&
+1*
+0-
+1#
+1T
+0R
+0U
+1S
+b10000 9
+1L
+0N
+b101110 :
+0W
+b10001 ;
+1Y
+1<
+1=
+1F
+1G
+1P
+1Q
+0.
+b110100011 0
+b11 2
+#22
+0<
+0=
+0F
+0G
+0P
+0Q
+1.
+#23
+1&
+1-
+1U
+0S
+0>
+1@
+b100000 9
+1W
+0Y
+b11110 :
+0V
+b100001 ;
+1X
+1<
+1=
+1F
+1G
+1P
+1Q
+0.
+b1011000011 0
+b100 2
+#24
+0<
+0=
+0F
+0G
+0P
+0Q
+1.
+#25
+0#
+1)
+1?
+0A
+1>
+0@
+b1 9
+1C
+0E
+b111111 :
+1V
+b0 ;
+0X
+1<
+1=
+1F
+1G
+1P
+1Q
+0.
+b1111100011 0
+b101 2
+#26
+0<
+0=
+0F
+0G
+0P
+0Q
+1.
+#27
+1#
+0)
+1,
+0?
+1A
+0J
+1H
+b10 9
+0C
+1E
+b111100 :
+0B
+b11 ;
+1D
+04
+13
+b1110 8
+1<
+1=
+1F
+1G
+1P
+1Q
+0.
+b10111100011 0
+b1 1
+b1 7
+b0 2
+#28
+0<
+0=
+0F
+0G
+0P
+0Q
+1.
+#29
+0$
+0-
+0,
+1J
+0H
+0K
+1I
+b100 9
+1B
+0D
+b111010 :
+0M
+b101 ;
+1O
+1<
+1=
+1F
+1G
+1P
+1Q
+0.
+b101111100011 0
+b1 2
+#30
+0<
+0=
+0F
+0G
+0P
+0Q
+1.
+#31
+0*
+1$
+0#
+1-
+1K
+0I
+0T
+1R
+b1000 9
+1M
+0O
+b110110 :
+0L
+b1001 ;
+1N
+1<
+1=
+1F
+1G
+1P
+1Q
+0.
+b1001100011 0
+b10 2
+#32
+0<
+0=
+0F
+0G
+0P
+0Q
+1.
+#33
+0%
+1*
+0-
+1#
+1T
+0R
+0U
+1S
+b10000 9
+1L
+0N
+b101110 :
+0W
+b10001 ;
+1Y
+1<
+1=
+1F
+1G
+1P
+1Q
+0.
+b110100011 0
+b11 2
+#34
+0<
+0=
+0F
+0G
+0P
+0Q
+1.
+#35
+1%
+1(
+0&
+1-
+1U
+0S
+0>
+1@
+b100000 9
+1W
+0Y
+b11110 :
+0V
+b100001 ;
+1X
+1<
+1=
+1F
+1G
+1P
+1Q
+0.
+b1011100001 0
+b100 2
+#36
+0<
+0=
+0F
+0G
+0P
+0Q
+1.
+#37
+0(
+1&
+0#
+1)
+1?
+0A
+1>
+0@
+b1 9
+1C
+0E
+b111111 :
+1V
+b0 ;
+0X
+1<
+1=
+1F
+1G
+1P
+1Q
+0.
+b1111000111 0
+b101 2
+#38
+0<
+0=
+0F
+0G
+0P
+0Q
+1.
+#39
+1#
+0)
+1,
+0?
+1A
+0J
+1H
+b10 9
+0C
+1E
+b111100 :
+0B
+b11 ;
+1D
+04
+16
+03
+b1101 8
+1<
+1=
+1F
+1G
+1P
+1Q
+0.
+b10111100011 0
+b10 1
+b10 7
+b0 2
+#40
+0<
+0=
+0F
+0G
+0P
+0Q
+1.
+#41
+0$
+0-
+0,
+1J
+0H
+0K
+1I
+b100 9
+1B
+0D
+b111010 :
+0M
+b101 ;
+1O
+1<
+1=
+1F
+1G
+1P
+1Q
+0.
+b101111100011 0
+b1 2
+#42
+0<
+0=
+0F
+0G
+0P
+0Q
+1.
+#43
+0*
+1$
+0#
+1-
+1K
+0I
+0T
+1R
+b1000 9
+1M
+0O
+b110110 :
+0L
+b1001 ;
+1N
+1<
+1=
+1F
+1G
+1P
+1Q
+0.
+b1001100011 0
+b10 2
+#44
+0<
+0=
+0F
+0G
+0P
+0Q
+1.
+#45
+0%
+1*
+0-
+1#
+1T
+0R
+0U
+1S
+b10000 9
+1L
+0N
+b101110 :
+0W
+b10001 ;
+1Y
+1<
+1=
+1F
+1G
+1P
+1Q
+0.
+b110100011 0
+b11 2
+#46
+0<
+0=
+0F
+0G
+0P
+0Q
+1.
+#47
+1%
+1(
+1!
+0&
+1-
+1U
+0S
+0>
+1@
+b100000 9
+1W
+0Y
+b11110 :
+0V
+b100001 ;
+1X
+1<
+1=
+1F
+1G
+1P
+1Q
+0.
+b1011100001 0
+b100 2
+#48
+0<
+0=
+0F
+0G
+0P
+0Q
+1.
+#49
+0(
+0!
+1&
+0#
+1)
+1?
+0A
+1>
+0@
+b1 9
+1C
+0E
+b111111 :
+1V
+b0 ;
+0X
+1<
+1=
+1F
+1G
+1P
+1Q
+0.
+b1111001111 0
+b101 2
+#50
+0<
+0=
+0F
+0G
+0P
+0Q
+1.
+#51
+1#
+0)
+1,
+0?
+1A
+0J
+1H
+b10 9
+0C
+1E
+b111100 :
+0B
+b11 ;
+1D
+06
+15
+b1 8
+1<
+1=
+1F
+1G
+1P
+1Q
+0.
+b10111100011 0
+b1110 1
+b1110 7
+b0 2
+#52
+0<
+0=
+0F
+0G
+0P
+0Q
+1.
+#53
+0$
+0-
+0,
+1J
+0H
+0K
+1I
+b100 9
+1B
+0D
+b111010 :
+0M
+b101 ;
+1O
+1<
+1=
+1F
+1G
+1P
+1Q
+0.
+b101111100011 0
+b1 2
+#54
+0<
+0=
+0F
+0G
+0P
+0Q
+1.
+#55
+0"
+1+
+1$
+1-
+1K
+0I
+0T
+1R
+b1000 9
+1M
+0O
+b110110 :
+0L
+b1001 ;
+1N
+1<
+1=
+1F
+1G
+1P
+1Q
+0.
+b1001100011 0
+b10 2
+#56
+0<
+0=
+0F
+0G
+0P
+0Q
+1.
+#57
+1"
+0+
+1T
+0R
+0U
+1S
+b10000 9
+1L
+0N
+b101110 :
+0W
+b10001 ;
+1Y
+1<
+1=
+1F
+1G
+1P
+1Q
+0.
+b1111110010 0
+b11 2
+#58
+0<
+0=
+0F
+0G
+0P
+0Q
+1.
+#59
+1U
+0S
+0>
+1@
+b100000 9
+1W
+0Y
+b11110 :
+0V
+b100001 ;
+1X
+1<
+1=
+1F
+1G
+1P
+1Q
+0.
+b1111100011 0
+b100 2
+#60
+0<
+0=
+0F
+0G
+0P
+0Q
+1.
+#61
+0#
+1)
+1?
+0A
+1>
+0@
+b1 9
+1C
+0E
+b111111 :
+1V
+b0 ;
+0X
+1<
+1=
+1F
+1G
+1P
+1Q
+0.
+b101 2
+#62
+0<
+0=
+0F
+0G
+0P
+0Q
+1.
+#63
+1#
+0)
+1,
+0?
+1A
+0J
+1H
+b10 9
+0C
+1E
+b111100 :
+0B
+b11 ;
+1D
+1<
+1=
+1F
+1G
+1P
+1Q
+0.
+b110 2

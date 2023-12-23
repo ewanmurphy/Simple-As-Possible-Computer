@@ -5,7 +5,7 @@ module JK_FlipFlop(CLR_bar, CLK, J, K, Q, Q_bar);
    input K;
    output reg Q, Q_bar;
 
-   always @(posedge CLK or posedge CLR_bar) begin
+   always @(posedge CLK or negedge CLR_bar) begin
       if (~CLR_bar) begin
          Q <= 0;
          Q_bar <= 1;
@@ -39,16 +39,19 @@ module SN74LS107_tb;
    SN74LS107 DUT(.CLK_1(CLK), .CLR_bar_1(CLR_bar_1), .J_1(J_1), .K_1(K_1), .Q_1(Q_1), .Q_bar_1(Q_bar_1),
                  .CLK_2(CLK), .CLR_bar_2(CLR_bar_2), .J_2(J_2), .K_2(K_2), .Q_2(Q_2), .Q_bar_2(Q_bar_2));
    initial begin
-      CLK=0;
+      CLK=0; #2;
       forever #1 CLK = ~CLK;
    end
    initial begin
       // Waveform generation
       $dumpfile("SN74LS107_tb.vcd");
       $dumpvars(0, SN74LS107_tb);
-      CLR_bar_1 = 0; CLR_bar_2 = 0;
-      #2;
+      // Clear the register
       CLR_bar_1 = 1;
+      CLR_bar_2 = 1; #1;
+      CLR_bar_1 = 0;
+      CLR_bar_2 = 0; #1;
+      CLR_bar_1 = 1; #1;
       // Test flip-flop 1
       J_1 = 0; K_1 = 1; // Set Q = 0
       #2;
@@ -71,7 +74,7 @@ module SN74LS107_tb;
       J_2 = 0; K_2 = 0; // Hold value
       #2;
       J_2 = 1; K_2 = 1; // Toggle value
-      #2
+      #4;
       $finish;
    end
    `endif
