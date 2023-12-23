@@ -1,4 +1,7 @@
-`include "../../../7400/SN74LS173/SN74LS173.v"
+`ifndef SN74LS173
+   `define SN74LS173
+   `include "7400/SN74LS173/SN74LS173.v"
+`endif
 module B_Register(bus_input, L_B_bar, CLK, add_sub_output);
    input [7:0] bus_input;
    input  L_B_bar;

@@ -16,8 +16,14 @@ The program counter is like someone pointing a finger at a list of instructions,
 ** Module :
 I have implemented the Program Counter block of the SAP-1 architecture using the SN74LS107 and SN74LS126 components as described in the above schematic. To my knowledge the open circles next to the ports of components on a schematic diagram are to indicate that the input signal should be inverted. This can be seen on ports 9 and 10 on component SN74LS107. However, when comparing the intended function of the Program Counter block with the logic of these components I found I needed to remove the inversion on the CLR_bar but not the CLK_bar to produce correct operation, this is reflected in the verilog code below. I am not sure if this is an error in my understand, my implementation of these components or the schematic diagram but this is what I have had to do to make it work so far.
 #+begin_src verilog
-`include "../../../7400/SN74LS107/SN74LS107.v"
-`include "../../../7400/SN74LS126/SN74LS126.v"
+`ifndef SN74LS107
+   `define SN74LS107
+   `include "7400/SN74LS107/SN74LS107.v"
+`endif
+`ifndef SN74LS126
+   `define SN74LS126
+   `include "7400/SN74LS126/SN74LS126.v"
+`endif
 module Program_Counter(C_P, CLK_bar, CLR_bar, E_P, address);
     input C_P;
     input CLK_bar;

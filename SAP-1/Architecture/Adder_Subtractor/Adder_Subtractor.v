@@ -1,5 +1,11 @@
-`include "../../../7400/SN74LS83/SN74LS83.v"
-`include "../../../7400/SN74LS126/SN74LS126.v"
+`ifndef SN74LS83
+   `define SN74LS83
+   `include "7400/SN74LS83/SN74LS83.v"
+`endif
+`ifndef SN74LS126
+   `define SN74LS126
+   `include "7400/SN74LS126/SN74LS126.v"
+`endif
 module Adder_Subtractor(a_input, b_input, S_U, E_U, bus_output);
    input [7:0] a_input;
    input [7:0] b_input;

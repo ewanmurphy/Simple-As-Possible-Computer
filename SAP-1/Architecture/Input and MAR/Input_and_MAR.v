@@ -1,12 +1,18 @@
-`include "../../../7400/SN74LS173/SN74LS173.v"
-`include "../../../7400/SN74LS157/SN74LS157.v"
-module Input_and_MAR(L_M_bar, CLK, bus_input, address, program_data, run_or_prog);
+`ifndef SN74LS173
+   `define SN74LS173
+   `include "7400/SN74LS173/SN74LS173.v"
+`endif
+`ifndef SN74LS157
+   `define SN74LS157
+   `include "7400/SN74LS157/SN74LS157.v"
+`endif
+module Input_and_MAR(L_M_bar, CLK, bus_address, address, programmer_address, run_or_prog);
    input L_M_bar;
    input CLK;
-   input  [3:0] bus_input;
+   input [3:0] bus_address;
    output [3:0] address;
 
-   input [3:0] program_data;
+   input [3:0] programmer_address;
    input run_or_prog;
 
 
@@ -15,8 +21,8 @@ module Input_and_MAR(L_M_bar, CLK, bus_input, address, program_data, run_or_prog
    wire gnd;
    assign gnd = 0;
 
-   SN74LS173 mar(.D(bus_input), .Q(mar_output), .CLK(CLK), .CLR(gnd), .G_bar({2{L_M_bar}}), .M(gnd), .N(gnd));
-   SN74LS157 mux(.A(program_data), .B(mar_output), .Y(address), .G_bar(gnd), .SELECT(run_or_prog));
+   SN74LS173 mar(.D(bus_address), .Q(mar_output), .CLK(CLK), .CLR(gnd), .G_bar({2{L_M_bar}}), .M(gnd), .N(gnd));
+   SN74LS157 mux(.A(programmer_address), .B(mar_output), .Y(address), .G_bar(gnd), .SELECT(run_or_prog));
    //SN74LS157 mux(.A(4'h1), .B(4'h2), .Y(address), .G_bar(gnd), .SELECT(run_or_prog));
 
 endmodule

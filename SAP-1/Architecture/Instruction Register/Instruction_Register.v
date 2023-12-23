@@ -1,4 +1,7 @@
-`include "../../../7400/SN74LS173/SN74LS173.v"
+`ifndef SN74LS173
+   `define SN74LS173
+   `include "7400/SN74LS173/SN74LS173.v"
+`endif
 module Instruction_Register(L_I_bar, CLK, CLR, E_I_bar, bus_input, data, instruction);
    input  L_I_bar;
    input  CLK;

@@ -1,5 +1,11 @@
-`include "../../../7400/SN74LS173/SN74LS173.v"
-`include "../../../7400/SN74LS126/SN74LS126.v"
+`ifndef SN74LS173
+   `define SN74LS173
+   `include "7400/SN74LS173/SN74LS173.v"
+`endif
+`ifndef SN74LS126
+   `define SN74LS126
+   `include "7400/SN74LS126/SN74LS126.v"
+`endif
 module Accumulator(bus_input, L_A_bar, E_A, CLK, bus_output, add_sub_output);
    input  [7:0] bus_input;
    input  L_A_bar;

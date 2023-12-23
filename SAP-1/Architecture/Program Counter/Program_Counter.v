@@ -1,5 +1,11 @@
-`include "../../../7400/SN74LS107/SN74LS107.v"
-`include "../../../7400/SN74LS126/SN74LS126.v"
+`ifndef SN74LS107
+   `define SN74LS107
+   `include "7400/SN74LS107/SN74LS107.v"
+`endif
+`ifndef SN74LS126
+   `define SN74LS126
+   `include "7400/SN74LS126/SN74LS126.v"
+`endif
 module Program_Counter(C_P, CLK_bar, CLR_bar, E_P, address);
     input C_P;
     input CLK_bar;

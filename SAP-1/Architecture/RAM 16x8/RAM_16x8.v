@@ -1,4 +1,7 @@
-`include "../../../7400/SN74189/SN74189.v"
+`ifndef SN74189
+   `define SN74189
+   `include "7400/SN74189/SN74189.v"
+`endif
 module RAM_16x8(address, CE_bar, memory_value, run_or_prog, read_or_write, programmer_data);
    input [3:0] address;
    input CE_bar;
@@ -9,7 +12,7 @@ module RAM_16x8(address, CE_bar, memory_value, run_or_prog, read_or_write, progr
 
    wire [3:0] ram_output_first_nibble;
    wire [3:0] ram_output_second_nibble;
-   assign memory_value = ~{ram_output_second_nibble, ram_output_first_nibble};
+   assign memory_value = {ram_output_second_nibble, ram_output_first_nibble};
 
    wire gnd = 0;
 

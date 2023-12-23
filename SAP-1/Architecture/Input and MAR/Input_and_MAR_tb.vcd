@@ -1,5 +1,5 @@
 $date
-	Fri Dec  8 11:57:33 2023
+	Wed Dec 13 12:30:13 2023
 $end
 $version
 	Icarus Verilog
@@ -17,9 +17,9 @@ $var reg 1 & run_or_prog $end
 $scope module DUT $end
 $var wire 1 " CLK $end
 $var wire 1 # L_M_bar $end
-$var wire 4 ' bus_input [3:0] $end
+$var wire 4 ' bus_address [3:0] $end
 $var wire 1 ( gnd $end
-$var wire 4 ) program_data [3:0] $end
+$var wire 4 ) programmer_address [3:0] $end
 $var wire 1 & run_or_prog $end
 $var wire 4 * mar_output [3:0] $end
 $var wire 4 + address [3:0] $end
