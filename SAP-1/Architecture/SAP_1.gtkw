@@ -1,0 +1,60 @@
+[*]
+[*] GTKWave Analyzer v3.3.117 (w)1999-2023 BSI
+[*] Wed Dec 13 14:45:22 2023
+[*]
+[dumpfile] "/home/ewan/Documents/LowLevelProgramming/Digital Electronics/Simple-As-Possible-Computer/SAP-1/Architecture/SAP_1_tb.vcd"
+[dumpfile_mtime] "Wed Dec 13 14:45:09 2023"
+[dumpfile_size] 17276
+[savefile] "/home/ewan/Documents/LowLevelProgramming/Digital Electronics/Simple-As-Possible-Computer/SAP-1/Architecture/SAP_1.gtkw"
+[timestart] 0
+[size] 1350 689
+[pos] -1 -1
+*-3.527884 4 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] SAP_1_tb.
+[treeopen] SAP_1_tb.DUT.
+[sst_width] 273
+[signals_width] 262
+[sst_expanded] 1
+[sst_vpaned_height] 188
+@28
+SAP_1_tb.CLK
+SAP_1_tb.CLK_bar
+SAP_1_tb.CLR
+SAP_1_tb.CLR_bar
+SAP_1_tb.HLT_bar
+@22
+SAP_1_tb.display[7:0]
+SAP_1_tb.programmer_address[3:0]
+SAP_1_tb.programmer_data[7:0]
+@28
+SAP_1_tb.read_or_write
+SAP_1_tb.run_or_prog
+@22
+SAP_1_tb.DUT.W_bus[7:0]
+SAP_1_tb.DUT.controller_sequencer.T[6:1]
+@28
+SAP_1_tb.DUT.program_counter.CLK_bar
+SAP_1_tb.DUT.program_counter.CLR_bar
+SAP_1_tb.DUT.program_counter.C_P
+SAP_1_tb.DUT.program_counter.E_P
+@22
+SAP_1_tb.DUT.program_counter.Q[3:0]
+SAP_1_tb.DUT.program_counter.address[3:0]
+@28
+SAP_1_tb.DUT.ram_16x8.CE_bar
+@22
+SAP_1_tb.DUT.ram_16x8.address[3:0]
+@28
+SAP_1_tb.DUT.ram_16x8.chip_select
+SAP_1_tb.DUT.ram_16x8.gnd
+@23
+SAP_1_tb.DUT.ram_16x8.memory_value[7:0]
+@22
+SAP_1_tb.DUT.ram_16x8.programmer_data[7:0]
+SAP_1_tb.DUT.ram_16x8.ram_output_first_nibble[3:0]
+SAP_1_tb.DUT.ram_16x8.ram_output_second_nibble[3:0]
+@28
+SAP_1_tb.DUT.ram_16x8.read_or_write
+SAP_1_tb.DUT.ram_16x8.run_or_prog
+[pattern_trace] 1
+[pattern_trace] 0
